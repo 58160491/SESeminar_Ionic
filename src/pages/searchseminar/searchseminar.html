@@ -1,0 +1,35 @@
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>ค้นหาเอกสาร</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content>
+      <ion-list>
+          <ion-item>
+            <ion-label>ปีการศึกษา</ion-label>
+            <ion-select [(ngModel)]="year">
+              <ion-option value="2560">2560</ion-option>
+              <ion-option value="2559">2559</ion-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+        <ion-list>
+          <ion-item>
+            <ion-label>ประเภทบทความ</ion-label>
+            <ion-select [(ngModel)]="catecgory">
+              <ion-option value="Journal">Journal</ion-option>
+              <ion-option value="Proceedings">Proceedings</ion-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+        <ion-col col-3 text-center>
+          <div class="center">
+            <button ion-button (click)="searchfile(year,catecgory)">ค้นหา</button>
+          </div>
+        </ion-col>
+  </ion-content>
+  

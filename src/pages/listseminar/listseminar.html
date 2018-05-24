@@ -1,0 +1,28 @@
+<!--
+  Generated template for the ListseminarPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>เอกสารสัมมนา</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-card>
+        <ion-card-header>
+          <p>ประเภท {{ss_type}}</p>
+          <p>รายชื่อเอกสารสัมมนา</p>
+        </ion-card-header>
+        <br>
+        <ion-card-content *ngFor = "let data of data_search;let i = index">
+          <p>{{i+1}}. INDEX: {{data.jou_index}}</p>
+          <p>&emsp;Title: {{data.jou_title}}</p>
+        </ion-card-content>
+      </ion-card>
+</ion-content>

@@ -3,16 +3,18 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-title>หน้าแรก</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+    <ion-card *ngFor="let data of date ;let i = index" (click)="showNisitdate(data)">
+        <ion-card-content>
+          <p>สัปดาห์ที่ {{i+1}}</p>
+          <p>วันที่ {{data.ss_date}}</p>
+          <p>จำนวน {{data.num_nisit}} คน</p>
+        </ion-card-content>
+      </ion-card>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+ 
 </ion-content>

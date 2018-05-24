@@ -8,16 +8,27 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
-      <ion-icon [name]="item.icon" item-start></ion-icon>
-      {{item.title}}
-      <div class="item-note" item-end>
-        {{item.note}}
-      </div>
-    </button>
-  </ion-list>
-  <div *ngIf="selectedItem" padding>
-    You navigated here from <b>{{selectedItem.title}}</b>
-  </div>
+    <ion-list>
+        <ion-item>
+          <ion-label>ปีการศึกษา</ion-label>
+          <ion-select [(ngModel)]="year">
+            <ion-option value="2560">2560</ion-option>
+            <ion-option value="2559">2559</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+      <ion-list>
+        <ion-item>
+          <ion-label>ประเภทบทความ</ion-label>
+          <ion-select [(ngModel)]="catecgory">
+            <ion-option value="Journal">Journal</ion-option>
+            <ion-option value="Proceedings">Proceedings</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+      <ion-col col-3 text-center>
+        <div class="center">
+          <button ion-button>ค้นหา</button>
+        </div>
+      </ion-col>
 </ion-content>
